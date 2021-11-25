@@ -1,0 +1,29 @@
+<mat-card>
+  <div id="htmlData">
+    <h2>Listado de Cuenta Habientes</h2>
+    <table class="table table-bordered mt-4">
+      <tr class="table-primary">
+        <th>No.</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Direccion</th>
+        <th>Telefono</th>
+        <th>Estado</th>
+        <th>Ahorro</th>
+      </tr>
+      <tr *ngFor="let usuario of ListaUsuarios">
+        <th>{{usuario.iterador}}</th>
+        <td>{{usuario.nombre}}</td>
+        <td>{{usuario.apellido}}</td>
+        <td>{{usuario.direccion}}</td>
+        <td>{{usuario.telefono}}</td>
+        <td>{{usuario.idEstado_usuario}}</td>
+        <td>{{usuario.ahorro_usuario}}</td>
+      </tr>
+    </table>
+  </div>
+<div style="text-align: center;">
+  <button class="btn col col-lg-4 btn-danger btn-block ml-4" (click)="downloadPDF()" >Download PDF</button>
+</div>
+</mat-card>
+

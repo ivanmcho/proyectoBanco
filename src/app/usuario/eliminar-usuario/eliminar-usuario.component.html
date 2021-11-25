@@ -1,0 +1,190 @@
+<mat-card>
+  <mat-card-content style="text-align: center">
+    <form>
+      <table border="1">
+
+        <tr>
+
+          <td>
+                     <label class="etiqueta">DPI:</label>  <input
+              class="entradaSearch"
+              type="text"
+              id="login_name"
+              placeholder="ingrese el login_name del usuario"
+              maxlength="18"
+              minlength="1"
+              name="login_name"
+              #login_name="ngModel"
+              matInput
+              [(ngModel)]="usuario.user"
+            />
+
+            <button class="buttonSearch"  (click)="this.consultarUsuario()">
+              <mat-icon>search</mat-icon>
+            </button>
+          </td>
+
+
+          <td>
+                      <label class="etiqueta">Contraseña:</label>
+                          <input
+              class="entrada"
+              type="text"
+              id="contraseña"
+              maxlength="13"
+              minlength="13"
+              disabled="true"
+              name="password"
+              #password="ngModel"
+              matInput
+              [(ngModel)]="usuario.pass"
+            />
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+                      <label class="etiqueta">Nombre:</label>         <input
+              class="entrada"
+              type="text"
+              id="nombre"
+              maxlength="18"
+              minlength="1"
+              onkeypress="return (event.charCode >= 65 && event.charCode <= 90  || event.charCode >=8  || event.charCode >=9
+                   || event.charCode >= 97 && event.charCode <= 122)"
+              name="nombre"
+              #nombre="ngModel"
+              matInput
+              [(ngModel)]="usuario.nombre"
+              disabled="true"
+            />
+
+          </td>
+
+          <td>
+                      <label class="etiqueta">Apellido:</label>         <input
+              class="entrada"
+              type="text"
+              id="apellido"
+              maxlength="18"
+              minlength="1"
+              onkeypress="return (event.charCode >= 65 && event.charCode <= 90  || event.charCode >=8  || event.charCode >=9
+                   || event.charCode >= 97 && event.charCode <= 122)"
+              name="apellido"
+              #apellido="ngModel"
+              matInput
+              [(ngModel)]="usuario.apellido"
+              disabled="true"
+            />
+
+          </td>
+
+
+        </tr>
+
+        <tr>
+
+          <td>
+                       <label class="etiqueta">Direccion:</label>
+            <input
+              class="entrada"
+              type="text"
+              id="direccion"
+              maxlength="18"
+              minlength="1"
+              name="direccion"
+              #direccion="ngModel"
+              matInput
+              [(ngModel)]="usuario.direccion"
+              disabled="true"
+            />
+          </td>
+
+          <td>
+                       <label class="etiqueta"  >Telefono:</label>
+            <input class="entrada" type="text" id="telefono" name="telefono" maxlength="8" placeholder="(+502) ____-____"
+            #telefono="ngModel" matInput [(ngModel)]="usuario.telefono"
+            disabled="true"/>
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+                      <label class="etiqueta">Rol:</label>             <select
+              id="rol"
+              class="entrada"
+              disabled="true"
+              name="rol"
+              #rol="ngModel"
+              matInput
+              [(ngModel)]="usuario.idRol"
+            >
+
+              <option value="0">Seleccione</option>
+
+              <option value="1">Administrador</option>
+
+              <option value="2">Docente</option>
+
+              <option value="3">Alumno</option>
+
+            </select>
+
+          </td>
+
+          <td>
+                      <label class="etiqueta">Estado:</label>
+                        <select
+              id="estado"
+              class="entrada"
+              disabled="true"
+              name="estado"
+              #estado="ngModel"
+              matInput
+              [(ngModel)]="usuario.idEstado"
+            >
+
+              <option value="0">Seleccione</option>
+
+              <option value="1">Activo</option>
+
+              <option value="2">Inactivo</option>
+
+            </select>
+
+          </td>
+        </tr>
+
+      </table>
+      <table style="margin: 0px auto;">
+        <tr>
+          <td>
+            <label class="etiqueta"  >Ahorro:</label>
+       <input class="entrada" type="text" id="ahorro" name="ahorro" maxlength="8"
+       #ahorro="ngModel" matInput [(ngModel)]="usuario.ahorro_usuario"
+       disabled="true"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <input
+      class="button"
+      type="button"
+      value="Eliminar usuario"
+      (click)="this.eliminarUsuario()"
+    />
+    <br />
+    <input
+      class="button-salida"
+      type="button"
+      value="Regresar al menu principal"
+      routerLink="/menu"
+    />
+  </mat-card-content>
+</mat-card>

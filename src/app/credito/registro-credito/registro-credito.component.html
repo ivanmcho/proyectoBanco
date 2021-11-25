@@ -1,0 +1,129 @@
+<mat-card>
+  <mat-card-content style="text-align: center">
+    <form class="registroForm">
+      <table border="0">
+        <tr>
+             
+          <td>
+            <label class="etiqueta">Dpi Usuario:*</label>
+            <input
+              class="entrada"
+              type="text"
+              id="login_name"
+              placeholder="Ingrese el DPI del usuario"
+              maxlength="18"
+              minlength="1"
+              type="text"
+              name="user"
+              #user="ngModel"
+              matInput
+              [(ngModel)]="credito.dpi_usuario"
+            />
+                    
+          </td>
+                  
+          <td>
+            <label class="etiqueta">Cantidad:*</label>
+            <input
+              class="entrada"
+              type="text"
+              id="cantidad_credito"
+              placeholder="Ingrese el monto del credito"
+              maxlength="18"
+              minlength="1"
+              type="text"
+              name="cantidad_credito"
+              #pwd="ngModel"
+              matInput
+              [(ngModel)]="credito.cantidad_credito"
+            />
+                    
+          </td>
+                
+        </tr>
+              
+        <tr>
+                  
+          <td>
+            <label class="etiqueta">Cuotas:*</label>         
+            <input
+              class="entrada"
+              type="text"
+              id="nombre"
+              placeholder="Ingrese las cuotas del credito"
+              maxlength="18"
+              minlength="1"
+              onkeypress="return (event.charCode >= 65 && event.charCode <= 90   || event.charCode >=8  || event.charCode >=9
+                           || event.charCode >= 97 && event.charCode <= 122)"
+              type="text"
+              name="name"
+              #name="ngModel"
+              matInput
+              [(ngModel)]="credito.cuotas_credito"
+            />
+                    
+          </td>
+                  
+          <td>
+            <label class="etiqueta">Ingrese del id_empleado:*</label>
+              <input
+              class="entrada"
+              type="text"
+              id="apellido"
+              placeholder="Ingrese el id del empleado"
+              maxlength="18"
+              minlength="1"
+              onkeypress="return (event.charCode >= 65 && event.charCode <= 90 || event.charCode >=8  || event.charCode >=9
+                   || event.charCode >= 97 && event.charCode <= 122)"
+              type="text"
+              name="apellido"
+              #apellido="ngModel"
+              matInput
+              [(ngModel)]="credito.id_empleado"
+            />
+                    
+          </td>
+                
+        </tr>
+              
+        <tr>   
+            <td>
+                <label class="etiqueta">Estado:*</label>
+                <select
+                id="estado"
+                class="entrada"
+                name="estado"
+                #estado="ngModel"
+                matInput
+                [(ngModel)]="credito.idEstado"
+                >
+                            
+                  <option value="0">Seleccione</option>
+                              
+                  <option value="3">Al dia</option>
+                              
+                  <option value="4">Moroso</option>
+                            
+                </select>
+                    
+            </td>
+                
+        </tr>
+      </table>
+    </form>
+    <br />
+    <input
+      class="button"
+      type="button"
+      value="Guardar registro"
+      (click)="this.registrarCredito()"
+    />
+    <br />
+    <input
+      class="button-salida"
+      type="button"
+      value="Regresar al menu principal"
+      routerLink="/menu-administrador"
+    />
+  </mat-card-content>
+</mat-card>

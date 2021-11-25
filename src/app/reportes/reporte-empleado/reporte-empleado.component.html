@@ -1,0 +1,25 @@
+<mat-card>
+  <div id="htmlData">
+    <h2>Listado de Empleaods</h2>
+    <table class="table table-bordered mt-4">
+      <tr class="table-primary">
+        <th>No.</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Estado</th>
+        <th>rol</th>
+      </tr>
+      <tr *ngFor="let empleado of ListaEmpleados">
+        <th>{{empleado.iterador}}</th>
+        <td>{{empleado.nombre_empleado}}</td>
+        <td>{{empleado.apellido_empleado}}</td>
+        <td>{{empleado.idEstado}}</td>
+        <td>{{empleado.idRol}}</td>
+      </tr>
+    </table>
+  </div>
+<div style="text-align: center;">
+  <button class="btn col col-lg-4 btn-danger btn-block ml-4" (click)="downloadPDF()" >Download PDF</button>
+</div>
+</mat-card>
+

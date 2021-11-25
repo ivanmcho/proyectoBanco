@@ -1,0 +1,149 @@
+<mat-card>
+  <mat-card-content style="text-align: center;">
+    <form>
+      <table border="0">
+              
+        <tr>
+                  
+          <td>
+                      <label class="etiqueta">Login_name:</label>  <input
+              class="entrada"
+              type="text"
+              id="login_name"
+              placeholder="ingrese el login_name del empleado"
+              maxlength="18"
+              minlength="1"
+              onkeypress="return (event.charCode >= 65 && event.charCode <= 90
+                   || event.charCode >= 97 && event.charCode <= 122)"
+              name="login_name"
+              #login_name="ngModel"
+              matInput
+              [(ngModel)]="empleado.user"
+
+            />
+
+
+          </td>
+
+                  
+          <td>
+                      <label class="etiqueta">Contraseña:</label>
+                          <input
+              class="entrada"
+              type="text"
+              id="contraseña"
+              maxlength="13"
+              minlength="13"
+              disabled="true"
+              name="password"
+              #password="ngModel"
+              matInput
+              [(ngModel)]="empleado.pass"
+            />
+                    
+          </td>
+                
+        </tr>
+              
+        <tr>
+                  
+          <td>
+                      <label class="etiqueta">Nombre:</label>         <input
+              class="entrada"
+              type="text"
+              id="nombre"
+              maxlength="18"
+              minlength="1"
+              onkeypress="return (event.charCode >= 65 && event.charCode <= 90  || event.charCode >=8  || event.charCode >=9
+                   || event.charCode >= 97 && event.charCode <= 122)"
+         name="nombre"
+         #nombre="ngModel"
+         matInput
+         [(ngModel)]="empleado.nombre"
+         disabled="true"
+            />
+                    
+          </td>
+                  
+          <td>
+                      <label class="etiqueta">Apellido:</label>           <input
+              class="entrada"
+              type="text"
+              id="apellido"
+              maxlength="18"
+              minlength="1"
+              onkeypress="return (event.charCode >= 65 && event.charCode <= 90  || event.charCode >=8  || event.charCode >=9
+                   || event.charCode >= 97 && event.charCode <= 122)"
+        disabled="true"
+        name="apellido"
+        #apellido="ngModel"
+        matInput
+        [(ngModel)]="empleado.apellido"
+            />
+                    
+          </td>
+                
+        </tr>
+              
+        <tr>
+                  
+          <td>
+                      <label class="etiqueta">Rol:</label>             <select
+              id="rol"
+              class="entrada"
+              disabled="true"
+              name="rol"
+              #rol="ngModel"
+              matInput
+              [(ngModel)]="empleado.idRol"
+            >
+                          
+              <option value="0">Seleccione</option>
+                          
+              <option value="1">Administrador</option>
+                          
+              <option value="2">Docente</option>
+                          
+              <option value="3">Alumno</option>
+                          
+            </select>
+                    
+          </td>
+                  
+          <td>
+                      <label class="etiqueta">Estado:</label>
+                        <select id="estado" class="entrada" disabled="true"
+            name="estado"
+            #estado="ngModel"
+            matInput
+            [(ngModel)]="empleado.idEstado">
+                          
+              <option value="0">Seleccione</option>
+                          
+              <option value="1">Activo</option>
+                          
+              <option value="2">Inactivo</option>
+                          
+            </select>
+                    
+          </td>
+                
+        </tr>
+              
+      </table>
+    </form>
+    <input
+      class="button"
+      type="button"
+      value="Consultar empleado"
+      (click)="this.consultarEmpleado()"
+    />
+    <br />
+    <input
+      class="button-salida"
+      type="button"
+      value="Regresar al menu principal"
+      routerLink="/menu"
+    />
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,64 @@
+<router-outlet></router-outlet>
+
+<nav class="animenu" role="navigation" aria-label="Menu">
+  <button class="animenu__btn" type="button">
+    <span class="animenu__btn__bar"></span>
+    <span class="animenu__btn__bar"></span>
+    <span class="animenu__btn__bar"></span>
+  </button>
+  <ul class="animenu__nav">
+
+
+    <li>
+      <a href="#" class="animenu__nav__hasDropdown" aria-haspopup="true">Cuenta</a>
+      <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
+        <li><a role="menuitem" >Perfil</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#" class="animenu__nav__hasDropdown" aria-haspopup="true">Usuarios</a>
+      <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
+        <li><a role="menuitem" routerLinkActive="active" routerLink="/registro-usuario" >Crear Usuario</a></li>
+        <li><a role="menuitem" routerLinkActive="active" routerLink="/consulta-usuario" >Consultar Usuario</a></li>
+        <li><a  role="menuitem" routerLinkActive="active" routerLink="/actualizar-usuario" >Actualizar Usuario</a></li>
+        <li><a  role="menuitem" routerLinkActive="active" routerLink="/eliminar-usuario" >Eliminar Usuario</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#" class="animenu__nav__hasDropdown" aria-haspopup="true">Empleados</a>
+      <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
+        <li><a role="menuitem" routerLinkActive="active" routerLink="/registro-empleado" >Crear Empleado</a></li>
+        <li><a role="menuitem" routerLinkActive="active" routerLink="/consulta-empleado" >Consultar Empleado</a></li>
+        <li><a  role="menuitem" routerLinkActive="active" routerLink="/actualizar-empleado" >Actualizar Empleados</a></li>
+        <li><a  role="menuitem" routerLinkActive="active" routerLink="/eliminar-empleado" >Eliminar Empleados</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" class="animenu__nav__hasDropdown" aria-haspopup="true">Creditos</a>
+      <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
+        <li><a role="menuitem" routerLinkActive="active" routerLink="/registro-credito" >Crear Credito</a></li>
+        <li><a role="menuitem" routerLinkActive="active" routerLink="/consulta-credito" >Consultar Credito</a></li>
+        <li><a  role="menuitem" routerLinkActive="active" routerLink="/actualizar-credito" >Actualizar Credito</a></li>
+        <li><a  role="menuitem" routerLinkActive="active" routerLink="/eliminar-credito" >Eliminar Credito</a></li>
+      </ul>
+    </li>
+
+
+
+    <li>
+      <a href="#" class="animenu__nav__hasDropdown" aria-haspopup="true">Reportes</a>
+      <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
+        <li><a role="menuitem"  routerLinkActive="active" routerLink="/reporte-usuario"   >Reporte de Cuenta Habientes</a></li>
+        <li><a role="menuitem" routerLinkActive="active" routerLink="/reporte-empleado"   >Reporte Empleado</a></li>
+        <li><a  role="menuitem" routerLinkActive="active" routerLink="/reporte-consulta" >Reporte Consultas</a></li>
+        <li><a  role="menuitem" routerLinkActive="active" routerLink="/reporte-credito" >Reporte Creditos</a></li>
+      </ul>
+    </li>
+
+
+
+
+  </ul>
+</nav>

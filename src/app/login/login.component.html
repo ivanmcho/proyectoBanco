@@ -1,1 +1,21 @@
-<p>login works!</p>
+<router-outlet></router-outlet>
+<mat-card>
+  <div>
+ <div class="containerIcon">
+   <mat-icon class="materialSource">
+     face
+     </mat-icon>
+ </div>
+  </div>
+   <h3>Login</h3>
+   <div>
+      <form>
+       <input type="text" name="usr" #usr="ngModel" matInput [(ngModel)]="usuario.user" placeholder="Ingrese su usuario">
+       <br/>
+       <input type="password" name="pwd" #pwd="ngModel" matInput [(ngModel)]="usuario.pass" placeholder="Ingrese su password">
+       <br/>
+       <button type="submit" (click)="this.
+       validarLoginUsuario()">Ingresar</button>
+     </form>
+   </div>
+ </mat-card>
